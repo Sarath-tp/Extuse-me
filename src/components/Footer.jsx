@@ -18,6 +18,7 @@ export default function Footer() {
           <a key={i} href={href}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={`Visit Extuse Me on ${label}`}
             onMouseEnter={() => setHovered(i)}
             onMouseLeave={() => setHovered(null)}
             style={{ fontSize: 11, color: hovered === i ? GOLD : 'rgba(255,255,255,.22)', textDecoration: 'none', transition: 'color .2s' }}>

@@ -74,9 +74,9 @@ export default function Picks() {
   )
 
   return (
-    <div id="picks" className="section-container">
+    <section id="picks" className="section-container">
       <div style={{ fontSize: 10, letterSpacing: 4, color: 'rgba(240,220,130,.5)', textTransform: 'uppercase', marginBottom: 10 }}>What to watch</div>
-      <div style={{ fontSize: 'clamp(28px,3.5vw,42px)', fontWeight: 700, letterSpacing: -2, marginBottom: 28 }}>My movie picks</div>
+      <h2 style={{ fontSize: 'clamp(28px,3.5vw,42px)', fontWeight: 700, letterSpacing: -2, marginBottom: 28, margin: '0 0 28px 0' }}>My movie picks</h2>
 
       {isMobile ? (
         /* ── Mobile / Tablet: Auto-play Carousel ── */
@@ -109,6 +109,6 @@ export default function Picks() {
           {PICKS.map((p, i) => card(p, i))}
         </div>
       )}
-    </div>
+    </section>
   )
 }

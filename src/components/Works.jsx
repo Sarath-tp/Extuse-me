@@ -44,9 +44,9 @@ export default function Works() {
     : WORKS.filter(w => w.type === filter)
 
   return (
-    <div id="works" className="section-container">
+    <section id="works" className="section-container">
       <div style={{ fontSize: 10, letterSpacing: 4, color: 'rgba(240,220,130,.5)', textTransform: 'uppercase', marginBottom: 10 }}>My work</div>
-      <div style={{ fontSize: 'clamp(28px,3.5vw,42px)', fontWeight: 700, letterSpacing: -2, marginBottom: 12 }}>Recent works</div>
+      <h2 style={{ fontSize: 'clamp(28px,3.5vw,42px)', fontWeight: 700, letterSpacing: -2, marginBottom: 12, margin: '0 0 12px 0' }}>Recent works</h2>
       <div style={{ fontSize: 14, color: 'rgba(255,255,255,.5)', lineHeight: 1.8, width: '100%', marginBottom: 24 }}>
         These are some of my recent works. I have a strong network of <strong style={{ color: GOLD, fontWeight: 400, fontStyle: 'italic' }}>100+ Fx pages and 60+ troll pages across Kerala</strong>, allowing me to provide effective promotions at competitive rates. I focus on choosing the right pages for each campaign to ensure <strong style={{ color: GOLD, fontWeight: 400 , fontStyle: 'italic' }}>good reach, engagement, and maximum visibility</strong> for my clients.
       </div>
@@ -62,6 +62,6 @@ export default function Works() {
       <div className="works-grid">
         {filtered.map((w, i) => <WorkCard key={w.name + filter} work={w} delay={i * 0.06} />)}
       </div>
-    </div>
+    </section>
   )
 }

@@ -106,7 +106,7 @@ export default function Hero() {
           Film · Memes · Creative
         </div>
 
-        <div style={{ fontSize: 'clamp(40px,8.5vw,108px)', fontWeight: 900, lineHeight: 1.05, letterSpacing: -1, marginBottom: 24 }}>
+        <h1 style={{ fontSize: 'clamp(40px,8.5vw,108px)', fontWeight: 900, lineHeight: 1.05, letterSpacing: -1, marginBottom: 24, margin: 0, padding: 0 }}>
           {words.map(({ text, delay, suffix }, i) => (
             <div key={i} style={{ overflow: 'hidden', display: 'block' }}>
               <span style={{ display: 'inline-block', transform: 'translateY(110%)', animation: `slideUp .9s ${delay} forwards cubic-bezier(.16,1,.3,1)` }}>
@@ -115,7 +115,7 @@ export default function Hero() {
               </span>
             </div>
           ))}
-        </div>
+        </h1>
 
         <div style={{ fontSize: 15, color: 'rgba(255,255,255,.3)', lineHeight: 1.8, margin: '0 auto 30px', maxWidth: 420, animation: 'fadeUp .8s 1s forwards', opacity: 0 }}>
           Cinema through memes, edits, and unforgettable scenes

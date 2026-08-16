@@ -27,6 +27,7 @@ export default function Navbar() {
         href="https://www.instagram.com/extuse_me?igsh=MWgweDl0aGJlamhjcQ=="
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Collab with Extuse Me on Instagram"
         onMouseEnter={() => setBtnHover(true)}
         onMouseLeave={() => setBtnHover(false)}
         style={{
