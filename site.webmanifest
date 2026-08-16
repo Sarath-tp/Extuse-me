@@ -1,0 +1,16 @@
+{
+  "name": "extuse me — Film, Memes & Creative Cinema",
+  "short_name": "extuse me",
+  "description": "Cinema through memes, edits, and creative video content by Sarath.",
+  "start_url": "/Extuse-me/",
+  "display": "standalone",
+  "background_color": "#06060a",
+  "theme_color": "#06060a",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
