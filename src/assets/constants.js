@@ -22,16 +22,18 @@ import learndeck from './learndeck.png'
 import Paradise from './Paradise.png'
 import Dhurandar from './Dhurandar.png'
 import balan from './balan.png'
+import adharam from './adharam.jpg'
 
 export const GOLD = '#f0dc82'
 export const BG   = '#06060a'
 export const WORKS = [
   { name: 'Paradise',            sub: '',         type: 'cut',   bg: '#160e0e', image: paradise           },
-  { name: 'Goat',            sub: '',         type: 'song',   bg: '#160e0e', image: goat           },
+  { name: 'Adharam',            sub: '',         type: 'song',   bg: '#160e0e', image: adharam           },
   { name: 'Meesaya Murukku', sub: '',             type: 'cut',    bg: '#120808', image: meesayamurukku },
   { name: 'Pyaar Prem Kalyanam', sub: '',        type: 'cut',   bg: '#120808', image: pyaarPremKalyanam },
   { name: 'Sraav',           sub: '',       type: 'song',   bg: '#0e0e1a', image: sraav          },
   { name: 'Vadhandhi',           sub: '',       type: 'cut',   bg: '#0e0e1a', image: vadhandhi          },
+   { name: 'Goat',            sub: '',         type: 'song',   bg: '#160e0e', image: goat           },
   { name: 'Karuppu',         sub: '',        type: 'cut',    bg: '#120808', image: karuppu        },
   { name: 'Gtakaaran',       sub: '',              type: 'song',   bg: '#0e1a10', image: gtakaaran      },
   { name: 'Kallakadath',     sub: '',        type: 'song',   bg: '#191200', image: kallakadath    },
