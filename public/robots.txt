@@ -52,4 +52,4 @@ User-agent: Twitterbot
 Allow: /
 
 # Sitemap Location
-Sitemap: https://sarath-tp.github.io/Extuse-me/sitemap.xml
+Sitemap: https://extuseme.in/sitemap.xml

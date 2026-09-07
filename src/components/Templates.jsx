@@ -23,14 +23,14 @@ const Card = ({ t, i, hovered, setHovered, style = {} }) => (
     }}
   >
     <div style={{ aspectRatio: '1', background: '#0e0e16', position: 'relative', overflow: 'hidden' }}>
-      <img src={t.image} alt={`Free ${t.name} download for video editing`} style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', inset: 0 }} />
+      <img src={t.image} alt={`Free ${t.name} download for video editing`} loading="lazy" width="1" height="1" style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', inset: 0 }} />
       <div style={{ position: 'absolute', inset: 0, background: 'rgba(6,6,10,.8)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 6, opacity: hovered === i ? 1 : 0, transition: 'opacity .3s' }}>
         <div style={{ fontSize: 24, color: GOLD }}>⬇</div>
         <div style={{ fontSize: 11, color: 'rgba(255,255,255,.7)' }}>Download free</div>
       </div>
     </div>
     <div style={{ padding: '9px 12px', background: '#0b0b12', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-      <div style={{ fontSize: 11, color: 'rgba(255,255,255,.35)' }}>{t.name}</div>
+      <div style={{ fontSize: 11, color: 'rgba(255,255,255,.68)' }}>{t.name}</div>
       <div style={{ fontSize: 10, background: 'rgba(240,220,130,.1)', color: GOLD, padding: '3px 10px', borderRadius: 99, border: '.5px solid rgba(240,220,130,.2)' }}>Free</div>
     </div>
   </a>
@@ -52,8 +52,8 @@ export default function Templates() {
 
   return (
     <section id="templates" className="section-container">
-      <div style={{ fontSize: 10, letterSpacing: 4, color: 'rgba(240,220,130,.5)', textTransform: 'uppercase', marginBottom: 10 }}>Free Resources</div>
-      <h2 style={{ fontSize: 'clamp(28px,3.5vw,42px)', fontWeight: 700, letterSpacing: -2, marginBottom: 28, margin: '0 0 28px 0' }}>Editing Templates &amp; Stuff</h2>
+      <div className="section-badge">Free Resources</div>
+      <h2 className="section-title">Editing Templates &amp; Stuff</h2>
 
       {/* Desktop: 3-column grid */}
       <div className="templates-grid templates-desktop">

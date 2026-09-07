@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { GOLD, BG } from '../assets/constants'
+import { GOLD, BG, SOCIAL_LINKS } from '../assets/constants'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -12,7 +12,8 @@ export default function Navbar() {
   }, [])
 
   return (
-    <nav className={`navbar-container ${scrolled ? 'navbar-scrolled' : ''}`} style={{
+    <header>
+    <nav className={`navbar-container ${scrolled ? 'navbar-scrolled' : ''}`} aria-label="Primary navigation" style={{
       position: 'sticky', top: 0, zIndex: 100,
       background: scrolled ? 'rgba(6,6,10,.95)' : BG,
       backdropFilter: scrolled ? 'blur(20px)' : 'none',
@@ -20,11 +21,11 @@ export default function Navbar() {
       display: 'flex', alignItems: 'center', justifyContent: 'space-between',
       transition: 'all .4s',
     }}>
-      <div style={{ fontSize: 15, fontWeight: 700, color: GOLD, letterSpacing: 3, textTransform: 'uppercase' }}>
+      <a href="/" aria-label="Extuse Me home" style={{ fontSize: 15, fontWeight: 700, color: GOLD, letterSpacing: 3, textTransform: 'uppercase', textDecoration: 'none' }}>
         extuse me
-      </div>
+      </a>
       <a
-        href="https://www.instagram.com/extuse_me?igsh=MWgweDl0aGJlamhjcQ=="
+        href={SOCIAL_LINKS.instagram}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Collab with Extuse Me on Instagram"
@@ -41,5 +42,6 @@ export default function Navbar() {
         Collab →
       </a>
     </nav>
+    </header>
   )
 }

@@ -117,25 +117,23 @@ export default function Hero() {
           ))}
         </h1>
 
-        <div style={{ fontSize: 15, color: 'rgba(255,255,255,.3)', lineHeight: 1.8, margin: '0 auto 30px', maxWidth: 420, animation: 'fadeUp .8s 1s forwards', opacity: 0 }}>
+        <div style={{ fontSize: 15, color: 'rgba(255,255,255,.68)', lineHeight: 1.8, margin: '0 auto 30px', maxWidth: 420, animation: 'fadeUp .8s 1s forwards', opacity: 0 }}>
           Cinema through memes, edits, and unforgettable scenes
         </div>
 
         <div className="hero-buttons" style={{ display: 'flex', gap: 12, justifyContent: 'center', animation: 'fadeUp .8s 1.2s forwards', opacity: 0 }}>
-          <button
+          <a href="#works"
             onMouseEnter={() => setHover(0, true)}
             onMouseLeave={() => setHover(0, false)}
-            onClick={() => document.getElementById('works')?.scrollIntoView({ behavior: 'smooth' })}
-            style={{ padding: '13px 32px', background: GOLD, color: BG, border: 'none', borderRadius: 99, fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit', transform: btnHover[0] ? 'scale(1.04)' : 'scale(1)', transition: 'transform .2s' }}>
+            style={{ padding: '13px 32px', background: GOLD, color: BG, border: 'none', borderRadius: 99, fontSize: 13, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit', transform: btnHover[0] ? 'scale(1.04)' : 'scale(1)', transition: 'transform .2s', textDecoration: 'none' }}>
             ▶ See my work
-          </button>
-          <button
+          </a>
+          <a href="#templates"
             onMouseEnter={() => setHover(1, true)}
             onMouseLeave={() => setHover(1, false)}
-            onClick={() => document.getElementById('templates')?.scrollIntoView({ behavior: 'smooth' })}
-            style={{ padding: '13px 32px', background: 'transparent', color: btnHover[1] ? '#fff' : 'rgba(255,255,255,.4)', border: `1px solid ${btnHover[1] ? 'rgba(255,255,255,.4)' : 'rgba(255,255,255,.14)'}`, borderRadius: 99, fontSize: 13, cursor: 'pointer', fontFamily: 'inherit', transition: 'all .25s' }}>
+            style={{ padding: '13px 32px', background: 'transparent', color: btnHover[1] ? '#fff' : 'rgba(255,255,255,.55)', border: `1px solid ${btnHover[1] ? 'rgba(255,255,255,.4)' : 'rgba(255,255,255,.14)'}`, borderRadius: 99, fontSize: 13, cursor: 'pointer', fontFamily: 'inherit', transition: 'all .25s', textDecoration: 'none' }}>
             Free templates
-          </button>
+          </a>
         </div>
 
       </div>

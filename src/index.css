@@ -16,14 +16,15 @@ body {
   line-height: 1;
 }
 
+:focus-visible {
+  outline: 2px solid #f0dc82;
+  outline-offset: 3px;
+}
+
 ::-webkit-scrollbar { width: 3px; }
 ::-webkit-scrollbar-track { background: #06060a; }
 ::-webkit-scrollbar-thumb { background: #f0dc82; border-radius: 99px; }
 
-@keyframes tickerAnim {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
 @keyframes marqueeL {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
@@ -35,7 +36,7 @@ body {
 
 /* Marquee & Ticker Animation Tracks */
 .ticker-gold-track {
-  animation: tickerAnim 18s linear infinite;
+  animation: marqueeL 18s linear infinite;
 }
 .ticker-brand-track {
   animation: marqueeL 28s linear infinite;
@@ -160,6 +161,21 @@ body {
 
 .section-container {
   padding: 56px 60px 0;
+}
+
+.section-badge {
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: rgba(240, 220, 130, 0.5);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 700;
+  letter-spacing: -2px;
+  margin: 0 0 24px 0;
 }
 
 .works-grid {

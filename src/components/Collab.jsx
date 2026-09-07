@@ -1,17 +1,17 @@
 import { useState } from 'react'
-import { GOLD, BG } from '../assets/constants'
+import { GOLD, BG, SOCIAL_LINKS } from '../assets/constants'
 
 export default function Collab() {
   const [hover, setHover] = useState(false)
 
   return (
-    <section id="collab" className="collab-container" style={{ textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+    <section id="collab" className="collab-container">
       <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 600, height: 600, background: 'radial-gradient(circle,rgba(240,220,130,.04),transparent 70%)', pointerEvents: 'none' }} />
 
-      <div style={{ fontSize: 10, letterSpacing: 4, color: 'rgba(240,220,130,.4)', textTransform: 'uppercase', marginBottom: 16 }}>
+      <div className="section-badge" style={{ marginBottom: 16 }}>
         Let's create together
       </div>
-      <h2 style={{ fontSize: 'clamp(28px,6vw,68px)', fontWeight: 800, letterSpacing: -2, lineHeight: 1.05, marginBottom: 14, margin: '0 0 14px 0' }}>
+      <h2 style={{ fontSize: 'clamp(28px,6vw,68px)', fontWeight: 800, letterSpacing: -2, lineHeight: 1.05, margin: '0 0 14px 0' }}>
         Got a project?<br />
         Let's make it <em style={{ color: GOLD, fontStyle: 'italic', fontWeight: 300 }}>cinematic.</em>
       </h2>
@@ -19,7 +19,7 @@ export default function Collab() {
         Open for collabs, client work, and anything film-related that needs a creative touch.
       </div>
       <a
-        href="https://www.instagram.com/extuse_me?igsh=MWgweDl0aGJlamhjcQ=="
+        href={SOCIAL_LINKS.instagram}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Collaborate with Extuse Me on Instagram"

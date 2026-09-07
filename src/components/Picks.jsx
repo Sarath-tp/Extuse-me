@@ -68,15 +68,15 @@ export default function Picks() {
         <div style={{ fontSize: 14, fontWeight: 600 }}>{p.title}</div>
         <div style={{ fontSize: 12, color: GOLD, fontWeight: 600, whiteSpace: 'nowrap' }}>{p.rating}</div>
       </div>
-      <div style={{ fontSize: 11, color: 'rgba(255,255,255,.22)' }}>{p.meta}</div>
-      <div style={{ fontSize: 12, color: 'rgba(255,255,255,.35)', marginTop: 10, paddingLeft: 10, borderLeft: '2px solid rgba(240,220,130,.22)', lineHeight: 1.7 }}>{p.quote}</div>
+      <div style={{ fontSize: 11, color: 'rgba(255,255,255,.68)' }}>{p.meta}</div>
+      <div style={{ fontSize: 12, color: 'rgba(255,255,255,.68)', marginTop: 10, paddingLeft: 10, borderLeft: '2px solid rgba(240,220,130,.22)', lineHeight: 1.7 }}>{p.quote}</div>
     </div>
   )
 
   return (
     <section id="picks" className="section-container">
-      <div style={{ fontSize: 10, letterSpacing: 4, color: 'rgba(240,220,130,.5)', textTransform: 'uppercase', marginBottom: 10 }}>What to watch</div>
-      <h2 style={{ fontSize: 'clamp(28px,3.5vw,42px)', fontWeight: 700, letterSpacing: -2, marginBottom: 28, margin: '0 0 28px 0' }}>My movie picks</h2>
+      <div className="section-badge">What to watch</div>
+      <h2 className="section-title">My movie picks</h2>
 
       {isMobile ? (
         /* ── Mobile / Tablet: Auto-play Carousel ── */

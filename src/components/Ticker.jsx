@@ -5,29 +5,34 @@ import netflixLogo from '../assets/netflix.png'
 import zee5Logo from '../assets/zee5.png'
 import hotstarLogo from '../assets/jio hotstar.png'
 import tataLogo from '../assets/tata.png'
+import spotifyLogo from '../assets/spotify.png'
 
 const ITEMS = ['MEMES & TROLLS', 'FILM EDITS', 'AESTHETIC EDITS', 'BRAND PROMOTIONS', 'REEL EDITS', 'CLIENT WORKS']
+
+const BRANDS = [
+  { src: districtLogo, alt: 'District cinema partner logo', width: 42, height: 42, opacity: 0.8 },
+  { src: primeLogo,    alt: 'Prime Video cinema partner logo', width: 40, height: 40, opacity: 0.8 },
+  { src: netflixLogo,  alt: 'Netflix cinema partner logo', width: 42, height: 42, opacity: 0.85 },
+  { src: zee5Logo,     alt: 'ZEE5 cinema partner logo', width: 42, height: 42, opacity: 0.8 },
+  { src: hotstarLogo,  alt: 'JioHotstar cinema partner logo', width: 42, height: 42, opacity: 0.8 },
+  { src: tataLogo,     alt: 'TATA cinema partner logo', width: 40, height: 40, opacity: 0.85 },
+  { src: spotifyLogo,  alt: 'Spotify cinema partner logo', width: 42, height: 42, opacity: 0.85 },
+]
 
 function BrandLogos() {
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: 56 }}>
-      {/* District Logo */}
-      <img src={districtLogo} alt="District" style={{ height: 42, width: 'auto', opacity: 0.8, filter: 'brightness(1.1)' }} />
-
-      {/* Prime Video Logo */}
-      <img src={primeLogo} alt="Prime Video" style={{ height: 40, width: 'auto', opacity: 0.8, filter: 'brightness(1.1)' }} />
-
-      {/* Netflix Logo */}
-      <img src={netflixLogo} alt="Netflix" style={{ height: 42, width: 'auto', opacity: 0.85, filter: 'brightness(1.1)' }} />
-
-      {/* ZEE5 Logo */}
-      <img src={zee5Logo} alt="ZEE5" style={{ height: 42, width: 'auto', opacity: 0.8, filter: 'brightness(1.1)' }} />
-
-      {/* JioHotstar Logo */}
-      <img src={hotstarLogo} alt="JioHotstar" style={{ height: 42, width: 'auto', opacity: 0.8, filter: 'brightness(1.1)' }} />
-
-      {/* TATA Logo */}
-      <img src={tataLogo} alt="TATA" style={{ height: 40, width: 'auto', opacity: 0.85, filter: 'brightness(1.1)' }} />
+      {BRANDS.map(({ src, alt, width, height, opacity }) => (
+        <img
+          key={alt}
+          src={src}
+          alt={alt}
+          loading="lazy"
+          width={width}
+          height={height}
+          style={{ height, width: 'auto', opacity, filter: 'brightness(1.1)' }}
+        />
+      ))}
     </div>
   )
 }
